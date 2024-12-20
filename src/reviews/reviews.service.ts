@@ -27,4 +27,8 @@ export class ReviewsService {
   async getReviewsForBook(bookId: string): Promise<ReviewDocument[]> {
     return this.reviewModel.find({ bookId }).sort({ createdAt: -1 }).exec();
   }
+
+  async getReviewsByUser(userId: string): Promise<ReviewDocument[]> {
+    return this.reviewModel.find({ userId }).exec();
+  }
 }

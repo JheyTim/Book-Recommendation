@@ -10,5 +10,6 @@ import { Review, ReviewSchema } from './schemas/review.schema';
   ],
   providers: [ReviewsService],
   controllers: [ReviewsController],
+  exports: [ReviewsService],
 })
 export class ReviewsModule {}
